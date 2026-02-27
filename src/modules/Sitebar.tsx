@@ -9,14 +9,16 @@ import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
 } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
+import { PATH } from '../components';
 
 const items = [
-  { key: 'home', icon: <PieChartOutlined />, label: 'Dashboard' },
-  { key: 'stacks', icon: <DesktopOutlined />, label: 'Stacks' },
-  { key: 'groups', icon: <ContainerOutlined />, label: 'Groups' },
-  { key: 'teachers', icon: <MailOutlined />, label: 'Teachers' },
-  { key: 'students', icon: <AppstoreOutlined />, label: 'Students' },
-  { key: 'rooms', icon: <AppstoreOutlined />, label: 'Rooms' },
+  { key: 'home', icon: <PieChartOutlined />, label: <Link to={PATH.home}>Home</Link> },
+  { key: 'stacks', icon: <DesktopOutlined />, label: <Link to={PATH.stacks}>Stackes</Link>},
+  { key: 'groups', icon: <ContainerOutlined />, label: <Link to={PATH.groups}>Groups</Link> },
+  { key: 'teachers', icon: <MailOutlined />, label: <Link to={PATH.teachers}>Teachers</Link> },
+  { key: 'students', icon: <AppstoreOutlined />, label: <Link to={PATH.students}>Students</Link> },
+  { key: 'rooms', icon: <AppstoreOutlined />, label: <Link to={PATH.rooms}>Rooms</Link> },
 ];
 
 const Sitebar = () => {
